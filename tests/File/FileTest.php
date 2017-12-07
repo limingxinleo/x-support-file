@@ -4,6 +4,7 @@ namespace Tests\File;
 
 use Tests\TestCase;
 use Xin\Support\File as FileSystem;
+use Xin\Support\File;
 
 class FilesystemTest extends TestCase
 {
@@ -414,5 +415,20 @@ class FilesystemTest extends TestCase
         foreach ($files->allFiles($this->tempDir) as $file) {
             $this->assertInstanceOf(\SplFileInfo::class, $file);
         }
+    }
+
+    public function testInstance()
+    {
+        $files1 = File::getInstance();
+        $files1->ins = 1;
+        $files2 = new File();
+        $files2->ins = 2;
+        $files3 = new File();
+        $files3->ins = 3;
+        $files4 = File::getInstance();
+        $files4->ins = 4;
+
+        $this->assertNotEquals($files2, $files3);
+        $this->assertEquals($files1, $files4);
     }
 }
