@@ -7,10 +7,11 @@ use FilesystemIterator;
 use Symfony\Component\Finder\Finder;
 use Xin\Traits\Common\Macroable;
 use Xin\Support\File\FileNotFoundException;
+use Xin\Traits\Common\InstanceTrait;
 
 class File
 {
-    use Macroable;
+    use Macroable, InstanceTrait;
 
     /**
      * Determine if a file or directory exists.
