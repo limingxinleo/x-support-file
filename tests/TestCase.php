@@ -9,11 +9,21 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase as UnitTestCase;
+use Xin\Support\File as FileSystem;
 
 class TestCase extends UnitTestCase
 {
+    protected $tempDir;
+
     public function setUp()
     {
+        $this->tempDir = __DIR__ . '/tmp';
+        mkdir($this->tempDir);
+    }
 
+    public function tearDown()
+    {
+        $files = new Filesystem;
+        $files->deleteDirectory($this->tempDir);
     }
 }
