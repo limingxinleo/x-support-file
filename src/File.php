@@ -5,8 +5,8 @@ namespace Xin\Support;
 use ErrorException;
 use FilesystemIterator;
 use Symfony\Component\Finder\Finder;
-use Illuminate\Support\Traits\Macroable;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Xin\Traits\Common\Macroable;
+use Xin\Support\File\FileNotFoundException;
 
 class File
 {
@@ -30,7 +30,7 @@ class File
      * @param  bool   $lock
      * @return string
      *
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @throws \Xin\Support\File\FileNotFoundException
      */
     public function get($path, $lock = false)
     {
@@ -76,7 +76,7 @@ class File
      * @param  string $path
      * @return mixed
      *
-     * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @throws \Xin\Support\File\FileNotFoundException
      */
     public function getRequire($path)
     {

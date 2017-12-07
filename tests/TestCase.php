@@ -11,7 +11,7 @@ namespace Tests;
 use PHPUnit\Framework\TestCase as UnitTestCase;
 use Xin\Support\File as FileSystem;
 
-class TestCase extends UnitTestCase
+abstract class TestCase extends UnitTestCase
 {
     protected $tempDir;
 

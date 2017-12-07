@@ -173,7 +173,7 @@ class FilesystemTest extends TestCase
     }
 
     /**
-     * @expectedException \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @expectedException \Xin\Support\File\FileNotFoundException
      */
     public function testGetThrowsExceptionNonexisitingFile()
     {
@@ -189,7 +189,7 @@ class FilesystemTest extends TestCase
     }
 
     /**
-     * @expectedException \Illuminate\Contracts\Filesystem\FileNotFoundException
+     * @expectedException \Xin\Support\File\FileNotFoundException
      */
     public function testGetRequireThrowsExceptionNonexisitingFile()
     {
