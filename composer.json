@@ -25,7 +25,7 @@
     },
     "require": {
         "php": ">=5.6",
-        "symfony/finder": "^3.3",
+        "symfony/finder": ">=3.3",
         "limingxinleo/x-trait-common": "^1.0"
     },
     "require-dev": {
